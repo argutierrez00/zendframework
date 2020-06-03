@@ -1,9 +1,9 @@
 name: name: Production Deployment
 
 on:
-  release:
-  types: # This configuration does not affect the page_build event above
-    - published
+  push:
+    branches:
+      - refs/tags/*
 
 jobs:
   test-release-trigger:
