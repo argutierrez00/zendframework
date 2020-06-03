@@ -2,14 +2,15 @@ name: name: Production Deployment
 
 on:
   release:
-  types: # This configuration does not affect the page_build event above
-    - published
+    types: [published]
 
 jobs:
   test-release-trigger:
     name: test-release-trigger
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v1 
       - name: print test
+
         run: |
           echo "Test Release"
