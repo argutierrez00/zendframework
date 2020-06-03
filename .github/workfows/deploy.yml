@@ -10,6 +10,8 @@ jobs:
     name: test-release-trigger
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v1
       - name: print test
+
         run: |
           echo "Test Release"
