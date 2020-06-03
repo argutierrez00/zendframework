@@ -2,7 +2,7 @@ name: name: Production Deployment
 
 on:
   release:
-    types: [published]
+    types: [created]
 
 jobs:
   test-release-trigger:
