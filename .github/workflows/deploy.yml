@@ -1,9 +1,9 @@
 name: Production Deployment
 
 on:
-  push:
-    branches:
-      - refs/tags/*
+  release:
+    types: [published]
+
 
 jobs:
   test-release-trigger:
